@@ -14,7 +14,7 @@
             {
                 for (int j = 0; j < columnCount; j++)
                 {
-                    Cell cell = new Cell();
+                    Cell cell = new Cell(false);
                     this.Cells[i, j] = cell;
                 }
             }

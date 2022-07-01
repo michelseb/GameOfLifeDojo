@@ -16,6 +16,13 @@ public class ProgramTest
     public void When_Initialized_Cell_Alive_Return_Cell_Alive()
     {
         var cell = new Cell(true);
-        Assert.Equal(true, cell.IsAlive);
+        Assert.True(cell.IsAlive);
+    }
+
+    [Fact]
+    public void When_Initialized_World_Exists_Alive_Cells()
+    {
+        var world = new World(8, 10);
+        Assert.Contains(world.Cells.Cast<Cell>(), cell => cell.IsAlive);
     }
 }
