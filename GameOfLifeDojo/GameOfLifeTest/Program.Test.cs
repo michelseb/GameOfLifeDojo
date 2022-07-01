@@ -20,6 +20,13 @@ public class ProgramTest
     }
 
     [Fact]
+    public void When_Initialized_Cell_Dead_Return_Cell_Dead()
+    {
+        var cell = new Cell(true);
+        Assert.False(cell.IsAlive);
+    }
+
+    [Fact]
     public void When_Initialized_World_Exists_Alive_Cells()
     {
         var world = new World(8, 10);
