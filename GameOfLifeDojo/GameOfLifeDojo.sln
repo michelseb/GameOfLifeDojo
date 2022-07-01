@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeDojo", "GameOfLifeDojo\GameOfLifeDojo.csproj", "{4954FCA3-551B-4844-B6E5-81C22BD78B54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOfLifeDojo.Test", "GameOfLifeTest\GameOfLifeDojo.Test.csproj", "{2A773B15-7B7E-4395-841B-0786E9EB3BE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4954FCA3-551B-4844-B6E5-81C22BD78B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4954FCA3-551B-4844-B6E5-81C22BD78B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4954FCA3-551B-4844-B6E5-81C22BD78B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4954FCA3-551B-4844-B6E5-81C22BD78B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A773B15-7B7E-4395-841B-0786E9EB3BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A773B15-7B7E-4395-841B-0786E9EB3BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A773B15-7B7E-4395-841B-0786E9EB3BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A773B15-7B7E-4395-841B-0786E9EB3BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECAE3CDF-8602-43E4-9393-AA2DF62E47F1}
+	EndGlobalSection
+EndGlobal
