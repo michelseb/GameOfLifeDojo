@@ -1,8 +1,8 @@
 using GameOfLifeDojo;
 
-namespace GameOfLifeTest;
+namespace GameOfLifeDojoTest;
 
-public class GameCellTest
+public class ProgramTest
 {
     [Fact]
     public void When_True_Should_Return_Truthy()
