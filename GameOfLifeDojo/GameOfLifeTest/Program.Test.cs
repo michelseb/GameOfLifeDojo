@@ -4,6 +4,7 @@ namespace GameOfLifeDojoTest;
 
 public class ProgramTest
 {
+    [Fact]
     public void When_Size_8_Return_Initialized_World()
     {
         var world = new World(8, 8);
