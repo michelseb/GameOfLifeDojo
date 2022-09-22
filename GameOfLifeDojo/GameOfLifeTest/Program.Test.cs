@@ -8,8 +8,8 @@ public class ProgramTest
     public void When_Size_8_Return_Initialized_World()
     {
         var world = new World(8, 10);
-        Assert.Equal(8, world.Cells.GetLength(0));
-        Assert.Equal(10, world.Cells.GetLength(1));
+        Assert.Equal(8, world.Width);
+        Assert.Equal(10, world.Height);
     }
 
     [Fact]
@@ -26,21 +26,28 @@ public class ProgramTest
         Assert.False(cell.IsAlive);
     }
 
-    [Fact]
-    public void When_Initialized_World_Exists_Alive_Cells()
-    {
-        var world = new World(8, 10);
-        Assert.Contains(world.Cells.Cast<Cell>(), cell => cell.IsAlive);
-    }
-
     [Theory]
-    [InlineData(1, 1)]
-    [InlineData(2, 2)]
-    [InlineData(2, 3)]
-    [InlineData(3, 3)]
-    [InlineData(3, 2)]
-    public void When_Cell_Stands_In_The_Middle_Of_A__Grid_It_Should_Have_8_Neighbours(int rowAmount, int columnAmount)
+    // Inside grid
+    [InlineData(0, 0, 3)]
+    [InlineData(0, 1, 5)]
+    [InlineData(0, 2, 3)]
+    [InlineData(1, 0, 5)]
+    [InlineData(1, 1, 8)]
+    [InlineData(1, 2, 5)]
+    [InlineData(2, 0, 3)]
+    [InlineData(2, 1, 5)]
+    [InlineData(2, 2, 3)]
+    //Out of bound
+    [InlineData(-1, 1, 0)]
+    [InlineData(1, -1, 0)]
+    [InlineData(-1, -1, 0)]
+    [InlineData(3, 2, 0)]
+    [InlineData(2, 3, 0)]
+    [InlineData(3, 3, 0)]
+    public void Neighbours_Count_Depending_On_Position_On_3x3_Grid_Test(int rowIndex, int columnIndex, int neighboursAmount)
     {
+        var world = new World(3, 3);
 
+        Assert.Equal(neighboursAmount, world.GetNeighbours(rowIndex, columnIndex).Count);
     }
 }
